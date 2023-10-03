@@ -1,0 +1,19 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+Редактирование статьи
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <a href="/posts" type="button" class="btn btn-outline-dark">Вернуться</a><br><br>
+    <h1>Редактирование статьи</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="Введите название записи"><br>
+        <textarea name="intro" id="intro" class="form-control" placeholder="Введите анонс записи">{{ article.intro }}</textarea><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Введите текст записи">{{ article.text }}</textarea><br>
+        <input type="submit" class="btn btn-warning" value="Обновить"><br>
+    </form>
+</div>
+{% endblock %}
